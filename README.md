@@ -1,2 +1,0 @@
-# DevOps
-My DevOps Studies
