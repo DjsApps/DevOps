@@ -1,0 +1,27 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('CreateEc2') {
+            steps {
+                echo 'EC2 Created'
+                git 'https://github.com/DjsApps/DevOps.git'
+            }
+        }
+        stage('GetEc2Details') {
+            steps {
+                echo 'EC2 Details Fetched'
+            }
+        }
+        stage('AddTagsToEC2') {
+            steps {
+                echo 'Tags Added to Ec2'
+            }
+        }
+        stage('UpdateEC2') {
+            steps {
+                echo 'EC2 Updated'
+            }
+        }
+    }
+}
