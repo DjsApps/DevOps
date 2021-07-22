@@ -5,7 +5,6 @@ pipeline {
         stage('CreateEc2') {
             steps {
                 echo 'EC2 Created'
-				/usr/local/bin/aws ec2 run-instances --image-id ami-03ac5a9b225e99b02 --count 1 --instance-type t2.micro --key-name eu-west-2-london-kp --subnet-id subnet-1128466b --security-group-ids sg-0f4d0280ea6c5d30f --region eu-west-2
             }
         }
         stage('GetEc2Details') {
