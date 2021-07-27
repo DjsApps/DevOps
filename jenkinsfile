@@ -2,6 +2,8 @@ pipeline {
     agent any
 	environment {
 		AWS_DEFAULT_REGION="us-east-1"
+		AWS_ACCESS_KEY_ID="AKIA4P6JR3ECY5GMVY4W"
+		AWS_SECRET_ACCESS_KEY="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"
 	}
     stages {
         stage('CreateEc2') {
