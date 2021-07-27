@@ -1,6 +1,8 @@
 pipeline {
     agent any
-
+	environment {
+		AWS_DEFAULT_REGION="eu-west-2"
+	}
     stages {
         stage('CreateEc2') {
             steps {
