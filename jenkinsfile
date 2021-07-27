@@ -4,12 +4,18 @@ pipeline {
     stages {
         stage('CreateEc2') {
             steps {
+			sh '''
                 echo 'EC2 Created'
+				aws --version
+				'''
             }
         }
         stage('GetEc2Details') {
             steps {
-                echo 'EC2 Details Fetched'
+			sh '''
+                echo 'EC2 Details Fething'
+				aws ec2 describe-instances
+				'''
             }
         }
         stage('AddTagsToEC2') {
