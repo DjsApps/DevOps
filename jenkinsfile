@@ -16,7 +16,7 @@ pipeline {
 			sh '''
                 echo 'EC2 Details Fething'
 				date
-				aws ec2 describe-instances
+				/usr/local/bin/aws ec2 describe-instances
 				'''
             }
         }
