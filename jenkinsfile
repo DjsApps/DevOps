@@ -7,7 +7,7 @@ pipeline {
 			sh '''
                 echo 'EC2 Created'
 				date
-				aws --version
+				/usr/local/bin/aws --version
 				'''
             }
         }
