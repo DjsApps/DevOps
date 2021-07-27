@@ -14,7 +14,7 @@ pipeline {
             }
         }
         stage('GetEc2Details') {
-            steps 
+            steps {
 				withCredentials([aws(accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'AWS-ACCOUNT_CREDS', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY')]) {
 				sh '''
                 echo 'EC2 Details Fething'
